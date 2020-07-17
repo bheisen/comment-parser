@@ -1551,14 +1551,14 @@ describe('Comment string parsing', function () {
         }
       }
     }, {
-      assoc_functions: true
+      assocFunctions: true
     }))
       .to.eql([{
         tags: [],
         line: 1,
         description: 'Example class',
         source: 'Example class',
-        function: 'constructor'
+        functionName: 'constructor'
       }])
   })
 
@@ -1571,14 +1571,14 @@ describe('Comment string parsing', function () {
 
       }
     }, {
-      assoc_functions: true
+      assocFunctions: true
     }))
       .to.eql([{
         tags: [],
         line: 1,
         description: 'Example function',
         source: 'Example function',
-        function: 'foo'
+        functionName: 'foo'
       }])
   })
 
@@ -1594,14 +1594,14 @@ describe('Comment string parsing', function () {
 
       }
     }, {
-      assoc_functions: true
+      assocFunctions: true
     }))
       .to.eql([{
         tags: [],
         line: 1,
         description: 'Example function',
         source: 'Example function',
-        function: 'foo'
+        functionName: 'foo'
       }])
   })
 
@@ -1615,14 +1615,14 @@ describe('Comment string parsing', function () {
 
       }
     }, {
-      assoc_functions: true
+      assocFunctions: true
     }))
       .to.eql([{
         tags: [],
         line: 1,
         description: 'Example function',
         source: 'Example function',
-        function: 'foo'
+        functionName: 'foo'
       }])
   })
 
@@ -1646,7 +1646,7 @@ describe('Comment string parsing', function () {
         }
       }
     }, {
-      assoc_functions: true
+      assocFunctions: true
     }))
       .to.eql([
         {
@@ -1662,7 +1662,7 @@ describe('Comment string parsing', function () {
           line: 2,
           description: 'Foo',
           source: 'Foo\n@tag name description',
-          function: 'foo'
+          functionName: 'foo'
         },
         {
           tags: [{
@@ -1677,7 +1677,7 @@ describe('Comment string parsing', function () {
           line: 10,
           description: 'Bar',
           source: 'Bar\n@tag name description',
-          function: 'bar'
+          functionName: 'bar'
         }
       ])
   })

@@ -198,7 +198,7 @@ function mkextract (opts) {
     trim: true,
     dotted_names: false,
     fence: '```',
-    assoc_functions: false,
+    assocFunctions: false,
     parsers: [
       PARSERS.parse_tag,
       PARSERS.parse_type,
@@ -231,7 +231,7 @@ function mkextract (opts) {
         line.match(/\s*(\w+)\s*=?\s*\(/)
       if (ret) {
         result = parse_block(chunk, opts)
-        result.function = ret[1]
+        result.functionName = ret[1]
         findMethod = false
       }
     }
@@ -267,7 +267,7 @@ function mkextract (opts) {
 
       // finalize block if end marker detected
       if (endPos !== -1) {
-        if (opts.assoc_functions) {
+        if (opts.assocFunctions) {
           findMethod = true
         } else {
           result = parse_block(chunk, opts)
